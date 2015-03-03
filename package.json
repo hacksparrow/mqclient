@@ -1,0 +1,22 @@
+{
+  "name": "mqclient",
+  "version": "0.0.1",
+  "description": "Client for various message queues",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hacksparrow/mqclient.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hacksparrow/mqclient/issues"
+  },
+  "homepage": "https://github.com/hacksparrow/mqclient",
+  "dependencies": {
+    "rabbitmq-nodejs-client": "^0.1.0"
+  }
+}
