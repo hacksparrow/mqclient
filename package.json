@@ -1,6 +1,6 @@
 {
   "name": "mqclient",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Client for various message queues",
   "main": "index.js",
   "scripts": {
