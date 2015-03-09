@@ -1,6 +1,6 @@
 {
   "name": "mqclient",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Client for various message queues",
   "main": "index.js",
   "scripts": {
@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/hacksparrow/mqclient",
   "dependencies": {
-    "rabbitmq-nodejs-client": "^0.1.0"
+    "amqplib": "^0.3.1"
   }
 }

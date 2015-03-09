@@ -1,6 +1,11 @@
-var client = require('../')('rabbitmq')
+var client = require('../amqp')
 
-client.pub('channel-abc', 'HEY YO!', function (err) {
-  if (err) throw new Error(err)
-  else console.log('published')
-})
+setInterval(function () {
+
+  client.pub('channel-abc', 'HEY HO!', function (err, msg) {
+    if (err) throw new Error(err)
+    else console.log('Published:', msg)
+  })
+
+}, 1000)
+
