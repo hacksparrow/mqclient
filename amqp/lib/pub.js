@@ -11,7 +11,7 @@ module.exports = function () {
     if ((exchange in exchanges)) {
 
       exchanges[exchange].publish(exchange, '', new Buffer(message))
-      callback(null, message)
+      return callback && callback(null, message)
 
     }
     // first request, connect first
@@ -27,10 +27,10 @@ module.exports = function () {
 
             exchanges[exchange] = ch
             exchanges[exchange].publish(exchange, '', new Buffer(message))
-            callback(null, message)
+            return callback && callback(null, message)
 
           }, function (fail) {
-            callback(fail, message)
+            return callback && callback(fail, message)
           })
 
         })

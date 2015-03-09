@@ -11,7 +11,7 @@ module.exports = function () {
 
       exchanges[exchange].consume(exchange, function(msg) {
 
-        callback(null, msg)
+        return callback && callback(null, msg)
 
       }, {
         noAck: true
@@ -37,7 +37,7 @@ module.exports = function () {
 
           ok = ok.then(function(queue) {
             return ch.consume(queue, function logMessage(msg) {
-              callback(null, msg.content.toString())
+              return callback && callback(null, msg.content.toString())
             }, {noAck: true})
           })
 
